@@ -27,10 +27,13 @@
     }
 
     if(empty($errors) == true) {
-      // Delete existing file
+
+      // Backup existing file
       if(file_exists($destination_file)) {
-        chmod($destination_file, 0755);
-        unlink($destination_file);
+        // Find the number of files that exist for current user
+        $filecount = count(glob($backup_dir . $username . "*.pdf"));
+        $backup_file = $backup_dir . $username . "_" . $filecount . ".pdf";
+        rename($destination_file, $backup_file);
       }
 
       // And move new one
