@@ -20,7 +20,7 @@ do
     name_trimmed="$(echo -e "${name}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
     resume=$name_trimmed.pdf
 
-    if [[ ! -f ./_Help/resume/$resume ]]; then
+    if [[ ! -f storage/uploads/$resume ]]; then
         # List students who have not yet submitted a resume
         echo $resume
     fi
