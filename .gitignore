@@ -1,4 +1,4 @@
-data.csv
-databas.sql
+*.csv
+*.sql
 *.db3
 *.pdf
