@@ -22,12 +22,12 @@
     }
     else {
       // Code quality doesn't matter at hackthons right?
-      include 'header.php';
+      include_once 'header.php';
       echo "<div class=\"alert alert-danger\" role=\"alert\">Couldn't log you in.</div>";
     }
   }
 
-  include 'header.php';
+  include_once 'header.php';
 ?>
 
   <div class="container">
