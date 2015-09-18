@@ -23,7 +23,7 @@
     else {
       // Code quality doesn't matter at hackthons right?
       include_once 'header.php';
-      echo "<div class=\"alert alert-danger\" role=\"alert\">Couldn't log you in.</div>";
+      echo "<div class=\"alert alert-danger\" role=\"alert\">Incorrect Username/Password</div>";
     }
   }
 
