@@ -3,7 +3,7 @@
 
 Quick & Dirty (php) Application to Upload Resumes.
 
-Started writing this at around 7:40 AM, deployed it by 5 PM.
+Started writing this at around 7:40 AM, [deployed](http://jdev.in/resuming/) it by 5 PM.
 
 Shotouts to [@kwikadi](http://github.com/kwikadi/) for designing the frontend, mass mailing login credentials, testing the app, and helping out with other random stuff.
 
