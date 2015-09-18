@@ -1,17 +1,12 @@
 <?php
   require_once 'session.php';
+  require_once 'config.php';
 
   // Report me some errors
   error_reporting(E_ERROR | E_WARNING | E_PARSE);
   ini_set('display_errors',1);
   ini_set('display_startup_errors',1);
 
-  $db = new SQLite3('/home/dufferzafar/dev/collector/resume.db3') or die("cannot open the database");
-
-  $upload_dir = "/home/dufferzafar/dev/collector/resumes/";
-  if (!is_dir($upload_dir) && !is_writable($upload_dir)) {
-    die('Upload directory is not writable, or does not exist.');
-  }
 ?>
 
 <?php

@@ -1,5 +1,6 @@
 <?php
-  require_once "session.php";
+  require_once 'session.php';
+  require_once 'config.php';
 
   if (!isset($_SESSION['loggedin'])) die("You need to be logged in to access this page.");
 
