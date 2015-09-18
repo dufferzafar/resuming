@@ -2,7 +2,11 @@
   require_once 'session.php';
   require_once 'config.php';
 
-  if (!isset($_SESSION['loggedin'])) die("You need to be logged in to access this page.");
+  if (!isset($_SESSION['loggedin'])) {
+    Header("Location: login.php");
+  }
+
+  include 'header.php';
 
   if (isset($_FILES['file'])) {
 
@@ -46,28 +50,26 @@
     }
     else {
       // TODO: Better Error Handling / Printing
-      print_r($errors);
+      foreach ($errors as $index => $error) {
+        echo $error;
+      }
     }
   }
 ?>
 
-<?php echo "Hello, " . $_SESSION['username']; ?>
+<div class ="container">
+  <p>Your existing resume will be replaced by the one you upload now.</p>
+  <br>
+  <form action="" method="POST" enctype="multipart/form-data">
+     <input id="file-uploader" name="file" type="file" class="file" data-show-preview="false">
+  </form>
+</div>
+<br> <br> <br>
 
-<!DOCTYPE html>
-<html lang="en">
+<?php include 'footer.php'; ?>
 
-  <head>
-    <meta charset="UTF-8">
-    <title>Upload Resume</title>
-  </head>
-
-  <body>
-    <form action="" method="POST" enctype="multipart/form-data">
-      <input type="file" name="file" />
-      <input type="submit"/>
-    </form>
-
-    <b id="logout"><a href="logout.php">Log Out</a></b>
-  </body>
-
-</html>
+<script>
+  $(document).ready(function() {
+    $("#file-uploader").fileinput({'allowedFileExtensions': ['pdf'], 'maxFileSize': 10240});
+  });
+</script>

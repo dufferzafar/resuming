@@ -2,7 +2,9 @@
   require_once 'session.php';
   require_once 'config.php';
 
-  if (!isset($_SESSION['loggedin'])) die("You need to be logged in to access this page.");
+  if (!isset($_SESSION['loggedin'])) {
+    Header("Location: login.php");
+  }
 
   $username = $_SESSION['username'];
   $resume =  $upload_dir . $username . ".pdf";
