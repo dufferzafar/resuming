@@ -24,3 +24,7 @@ ls:
 
 lsb:
 	@tree storage/backups
+
+# List students who have updated their resume (at least once)
+lsn:
+	@tree storage/backups -P "*_0.pdf"
