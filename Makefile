@@ -7,6 +7,10 @@ db:
 	@sudo rm /usr/share/adminer/adminer/resume.db3
 	@sudo ln /home/dufferzafar/dev/collector/resume.db3 /usr/share/adminer/adminer/resume.db3
 
-setup:
-	@mkdir resumes
-	@sudo chown www-data:www-data resumes
+mkdir:
+	@mkdir -p storage/uploads
+	@mkdir -p storage/backups
+	@sudo chown -R www-data:www-data storage
+
+rmdir:
+	@sudo rm -ri storage
