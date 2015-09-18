@@ -27,7 +27,7 @@
     <h4>Change Password</h4>
     <p>Auto assigned passwords are a bitch to remember, right? Well, here's your chance to lower your account security :)</p>
     <p><a class="btn btn-primary disabled" href="#" role="button" >Change Password &raquo;</a></p>
-    <p>(feature coming soon.)</p>
+    <p>(feature coming soon)</p>
   </div>
 </div>
 

@@ -47,5 +47,5 @@
           <?php } ?>
         </ul>
       </nav>
-      <h3 class="text-muted">Resuming</h3>
+      <a href="/"><h3 class="text-muted">Resuming</h3></a>
     </div>
