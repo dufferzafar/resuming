@@ -14,3 +14,9 @@ mkdir:
 
 rmdir:
 	@sudo rm -ri storage
+
+ls:
+	@tree storage/uploads
+
+lsb:
+	@tree storage/backups
