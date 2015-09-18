@@ -8,7 +8,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Resuming!</title>
+    <?php if(isset($_SESSION['loggedin'])) { ?>
+      <title> <?php echo $_SESSION['username'] . " - Resuming" ?> </title>
+    <?php } else { ?>
+      <title>Welcome to Resuming</title>
+    <?php } ?>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
