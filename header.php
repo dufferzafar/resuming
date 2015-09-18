@@ -38,9 +38,9 @@
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <li role="presentation"><a href="upload.php">Upload Resume</a></li>
-          <li role="presentation"><a href="view.php">View Resume</a></li>
           <?php if(isset($_SESSION['loggedin'])) { ?>
+            <li role="presentation"><a href="upload.php">Upload Resume</a></li>
+            <li role="presentation"><a href="view.php">View Resume</a></li>
             <li role="presentation" class="active"><a href="logout.php">Logout</a></li>
           <?php } else { ?>
             <li role="presentation" class="active"><a href="login.php">Sign in</a></li>

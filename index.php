@@ -16,6 +16,7 @@
   <p><a class="btn btn-lg btn-success" href="upload.php" role="button">Upload Resume</a></p>
 </div>
 
+<?php if(isset($_SESSION['loggedin'])) { ?>
 <div class="row marketing">
   <div class="col-lg-6">
     <h4>View Resume</h4>
@@ -30,6 +31,7 @@
     <p>(feature coming soon)</p>
   </div>
 </div>
+<?php } ?>
 
 <!--
   Top level container will be closed in footer.
