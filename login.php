@@ -21,7 +21,9 @@
       header("location: upload.php");
     }
     else {
-      echo "Couldn't log you in.";
+      // Code quality doesn't matter at hackthons right?
+      include 'header.php';
+      echo "<div class=\"alert alert-danger\" role=\"alert\">Couldn't log you in.</div>";
     }
   }
 
