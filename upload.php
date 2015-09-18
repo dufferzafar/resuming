@@ -49,9 +49,22 @@
 ?>
 
 <?php echo "Hello, " . $_SESSION['username']; ?>
-<form action="" method="POST" enctype="multipart/form-data">
-  <input type="file" name="file" />
-  <input type="submit"/>
-</form>
 
-<b id="logout"><a href="logout.php">Log Out</a></b>
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Upload Resume</title>
+  </head>
+
+  <body>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit"/>
+    </form>
+
+    <b id="logout"><a href="logout.php">Log Out</a></b>
+  </body>
+
+</html>

@@ -10,28 +10,27 @@
 ?>
 
 <?php
-if($_SESSION['loggedin'] == 1) {
-  Header("Location: upload.php");
-}
-elseif(isset( $_POST['email'], $_POST['password'])) {
-  $stmt = $db->prepare('SELECT * FROM users WHERE email=:email and password=:password LIMIT 1');
-  $stmt->bindValue(':email', $_POST['email'], SQLITE3_TEXT);
-  $stmt->bindValue(':password', $_POST['password'], SQLITE3_TEXT);
-
-  $result = $stmt->execute();
-  $row = $result->fetchArray();
-
-  if (!empty($row)) {
-    $_SESSION['loggedin'] = 1;
-    $_SESSION['username'] = $row[1];
-
-    header("location: upload.php");
+  if($_SESSION['loggedin'] == 1) {
+    Header("Location: upload.php");
   }
-  else {
-    echo "Couldn't log you in.";
-  }
-}
+  elseif(isset( $_POST['email'], $_POST['password'])) {
+    $stmt = $db->prepare('SELECT * FROM users WHERE email=:email and password=:password LIMIT 1');
+    $stmt->bindValue(':email', $_POST['email'], SQLITE3_TEXT);
+    $stmt->bindValue(':password', $_POST['password'], SQLITE3_TEXT);
 
+    $result = $stmt->execute();
+    $row = $result->fetchArray();
+
+    if (!empty($row)) {
+      $_SESSION['loggedin'] = 1;
+      $_SESSION['username'] = $row[1];
+
+      header("location: upload.php");
+    }
+    else {
+      echo "Couldn't log you in.";
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +38,7 @@ elseif(isset( $_POST['email'], $_POST['password'])) {
 
   <head>
     <meta charset="UTF-8">
-    <title>Resumes!</title>
+    <title>Login</title>
   </head>
 
   <body>
