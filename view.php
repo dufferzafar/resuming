@@ -10,8 +10,17 @@
   $resume =  $upload_dir . $username . ".pdf";
 
   if(! file_exists($resume)) {
+
+    include 'header.php';
+
     echo "Your resume doesn't exist. Contact administrators immediately.";
-    // echo "<br> <br>"; echo $resume;
+    echo "<br> <br>";
+
+    echo "File not found - " . $resume;
+    echo "<br> <br>";
+
+    include 'footer.php';
+
   }
   else {
     header('Content-Description: File Transfer');
